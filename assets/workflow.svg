@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a1a"/>
+      <stop offset="1" stop-color="#2f8cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#111111"/>
+  <rect x="42" y="42" width="1116" height="591" rx="28" fill="#272727" stroke="#3c3c3f"/>
+  <text x="88" y="124" fill="#ff7a1a" font-size="24" font-family="Arial" font-weight="700">ADAPTIVE NEWS AI</text>
+  <text x="88" y="190" fill="#f3f3f1" font-size="54" font-family="Arial" font-weight="800">Private crawler core, public workflow</text>
+  <g font-family="Arial" font-size="24" font-weight="700">
+    <rect x="90" y="280" width="180" height="100" rx="16" fill="#1f1f22" stroke="#3c3c3f"/>
+    <text x="126" y="340" fill="#f3f3f1">Discover</text>
+    <path d="M285 330H390" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
+    <rect x="405" y="280" width="180" height="100" rx="16" fill="#1f1f22" stroke="#3c3c3f"/>
+    <text x="468" y="340" fill="#f3f3f1">Crawl</text>
+    <path d="M600 330H705" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
+    <rect x="720" y="280" width="180" height="100" rx="16" fill="#1f1f22" stroke="#3c3c3f"/>
+    <text x="772" y="340" fill="#f3f3f1">Dataset</text>
+    <path d="M915 330H1020" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
+    <rect x="930" y="430" width="180" height="100" rx="16" fill="#1f1f22" stroke="#3c3c3f"/>
+    <text x="974" y="490" fill="#f3f3f1">Ask AI</text>
+  </g>
+  <text x="90" y="520" fill="#a3a3a3" font-size="28" font-family="Arial">Developer portal: signup, API keys, plans, crawl planning</text>
+</svg>

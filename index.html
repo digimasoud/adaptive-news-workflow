@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adaptive News AI Public Workflow</title>
+  <meta name="description" content="Public workflow for Adaptive News AI: ask AI about crawled news, private crawler core, developer API keys, crawl planning, and SEO-ready news platform architecture.">
+  <meta property="og:title" content="Adaptive News AI Public Workflow">
+  <meta property="og:description" content="Private crawler core, public news AI workflow, developer API keys, and crawl planning.">
+  <meta property="og:image" content="assets/workflow.svg">
+  <style>
+    :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #111; color: #f3f3f1; }
+    body { margin: 0; background: radial-gradient(circle at 0 0, rgba(255,122,26,.16), transparent 34%), #111; }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0; display: grid; gap: 22px; }
+    section { background: #272727; border: 1px solid #3c3c3f; border-radius: 12px; padding: 24px; }
+    h1 { font-size: clamp(34px, 6vw, 72px); line-height: 1.1; margin: 0; }
+    h2 { margin: 0 0 12px; }
+    p, li { color: #b7b7b7; line-height: 2; }
+    .eyebrow { color: #ff7a1a; font-weight: 900; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .card { background: #1f1f22; border: 1px solid #3c3c3f; border-radius: 10px; padding: 16px; }
+    img { max-width: 100%; border-radius: 12px; border: 1px solid #3c3c3f; }
+    code { direction: ltr; display: block; background: #1b1b1d; border: 1px solid #3c3c3f; border-radius: 8px; padding: 14px; color: #ffcf70; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <p class="eyebrow">PUBLIC WORKFLOW</p>
+      <h1>Adaptive News AI</h1>
+      <p>کدبیس کرالر خصوصی می‌ماند، اما workflow محصول عمومی است: کشف سایت‌های خبری، خزش، دیتاست، پرسش از AI و دسترسی Developer API.</p>
+    </section>
+    <img src="assets/workflow.svg" alt="Adaptive News AI workflow diagram">
+    <section>
+      <h2>Workflow</h2>
+      <div class="grid">
+        <div class="card"><strong>Discover</strong><p>خواندن robots.txt، sitemap و news sitemap.</p></div>
+        <div class="card"><strong>Crawl</strong><p>دریافت HTML، ثبت HTTP status و ساخت دیتاست.</p></div>
+        <div class="card"><strong>Ask</strong><p>پرسش خبری با AI روی دیتاست جمع‌آوری‌شده.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>Private Boundary</h2>
+      <p>Source code, credentials, local SQLite databases, panel config, and raw data remain private. Public docs only explain goals, architecture, and integration flow.</p>
+      <code>Private core + Public workflow + Developer API</code>
+    </section>
+  </main>
+</body>
+</html>
+
