@@ -34,12 +34,13 @@ Target sites -> robots/sitemaps -> adaptive crawler -> local dataset -> AI news 
 
 ## Goals
 
-- Public news AI homepage.
-- Private production crawler core.
-- Public workflow and SEO-friendly project page.
-- Developer API self-service.
-- Scheduled crawl plans.
-- Multilingual news summaries.
+- `done`: Public news AI homepage.
+- `active`: Developer API self-service.
+- `next`: Scheduled crawl plans.
+- `active`: 100+ Persian and international news sources.
+- `planned`: AI extraction, entities, tags, and multilingual summaries.
+- `done`: Public workflow with private source code.
+- `planned`: Usage metering, rate limits, and billing readiness.
 
 ## Private Boundary
 
