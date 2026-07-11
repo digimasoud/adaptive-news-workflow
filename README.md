@@ -4,6 +4,12 @@ Public workflow documentation for Adaptive News AI.
 
 The private codebase is not published here. This public package explains the product workflow, goals, architecture, and developer integration model.
 
+Public page:
+
+```text
+https://digimasoud.github.io/adaptive-news-workflow/
+```
+
 ## What It Does
 
 - Ask AI questions about crawled news.
@@ -30,4 +36,3 @@ Target sites -> robots/sitemaps -> adaptive crawler -> local dataset -> AI news 
 ## Private Boundary
 
 This public repo intentionally excludes source code, credentials, private config, local SQLite databases, and raw crawl data.
-
