@@ -17,6 +17,14 @@ https://digimasoud.github.io/adaptive-news-workflow/
 - Track HTTP status codes and crawl health.
 - Store a local news dataset.
 - Let developers sign up, choose a plan, create API keys, and define crawl plans.
+- Show public screenshots for the homepage, developer portal, and technical crawler panel.
+- Publish SEO metadata, Open Graph tags, `robots.txt`, `sitemap.xml`, and JSON-LD structured data.
+
+## Screenshots
+
+- `assets/homepage.png`: AI news question homepage.
+- `assets/developer.png`: Developer portal for API keys, plans, and crawl planning.
+- `assets/panel.png`: Technical crawler panel for reports, targets, and AI status.
 
 ## Workflow
 

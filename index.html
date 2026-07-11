@@ -3,25 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adaptive News AI Public Workflow</title>
-  <meta name="description" content="Public workflow for Adaptive News AI: ask AI about crawled news, private crawler core, developer API keys, crawl planning, and SEO-ready news platform architecture.">
+  <title>Adaptive News AI | Public Workflow, News AI Chat, Developer API</title>
+  <meta name="description" content="Adaptive News AI public workflow: ask AI about crawled news, keep the crawler codebase private, publish SEO-ready workflow docs, developer API keys, crawl planning, and crawler panel screenshots.">
+  <meta name="keywords" content="Adaptive News AI, AI news chat, news crawler workflow, developer news API, crawl planning, private crawler public workflow, SEO news platform">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://digimasoud.github.io/adaptive-news-workflow/">
   <meta property="og:title" content="Adaptive News AI Public Workflow">
-  <meta property="og:description" content="Private crawler core, public news AI workflow, developer API keys, and crawl planning.">
-  <meta property="og:image" content="assets/workflow.svg">
+  <meta property="og:description" content="Private crawler core, public AI news workflow, developer API keys, crawl planning, and screenshots from the live panel.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digimasoud.github.io/adaptive-news-workflow/">
+  <meta property="og:image" content="https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png">
+  <meta property="og:image:alt" content="Adaptive News AI homepage with AI news question interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adaptive News AI Public Workflow">
+  <meta name="twitter:description" content="Ask AI about crawled news, publish the workflow, and keep the crawler codebase private.">
+  <meta name="twitter:image" content="https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Adaptive News AI",
+      "applicationCategory": "NewsApplication",
+      "operatingSystem": "Web",
+      "description": "A public AI news question workflow backed by a private adaptive news crawler core and developer API planning.",
+      "url": "https://digimasoud.github.io/adaptive-news-workflow/",
+      "image": "https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "AI news question homepage",
+        "Private crawler core",
+        "Public workflow documentation",
+        "Developer API keys",
+        "Crawl planning",
+        "Crawler control panel"
+      ]
+    }
+  </script>
   <style>
     :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #111; color: #f3f3f1; }
     body { margin: 0; background: radial-gradient(circle at 0 0, rgba(255,122,26,.16), transparent 34%), #111; }
-    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0; display: grid; gap: 22px; }
+    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0; display: grid; gap: 22px; }
     section { background: #272727; border: 1px solid #3c3c3f; border-radius: 12px; padding: 24px; }
     h1 { font-size: clamp(34px, 6vw, 72px); line-height: 1.1; margin: 0; }
     h2 { margin: 0 0 12px; }
     p, li { color: #b7b7b7; line-height: 2; }
     .eyebrow { color: #ff7a1a; font-weight: 900; }
     .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .card { background: #1f1f22; border: 1px solid #3c3c3f; border-radius: 10px; padding: 16px; }
+    .shot { background: #1f1f22; border: 1px solid #3c3c3f; border-radius: 12px; overflow: hidden; }
+    .shot div { padding: 14px; }
+    .shot h3 { margin: 0 0 6px; }
     img { max-width: 100%; border-radius: 12px; border: 1px solid #3c3c3f; }
+    .shot img { border: 0; border-radius: 0; display: block; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
     code { direction: ltr; display: block; background: #1b1b1d; border: 1px solid #3c3c3f; border-radius: 8px; padding: 14px; color: #ffcf70; }
-    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; border-radius: 8px; padding: 10px 14px; background: #ff7a1a; color: #111; font-weight: 900; text-decoration: none; }
+    .button.secondary { color: #f3f3f1; background: #1f1f22; border: 1px solid #3c3c3f; }
+    @media (max-width: 900px) { .grid, .shots { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -30,6 +73,10 @@
       <p class="eyebrow">PUBLIC WORKFLOW</p>
       <h1>Adaptive News AI</h1>
       <p>کدبیس کرالر خصوصی می‌ماند، اما workflow محصول عمومی است: کشف سایت‌های خبری، خزش، دیتاست، پرسش از AI و دسترسی Developer API.</p>
+      <div class="cta">
+        <a class="button" href="https://github.com/digimasoud/adaptive-news-workflow">مشاهده GitHub عمومی</a>
+        <a class="button secondary" href="#screenshots">دیدن تصاویر پنل</a>
+      </div>
     </section>
     <img src="assets/workflow.svg" alt="Adaptive News AI workflow diagram">
     <section>
@@ -40,12 +87,39 @@
         <div class="card"><strong>Ask</strong><p>پرسش خبری با AI روی دیتاست جمع‌آوری‌شده.</p></div>
       </div>
     </section>
+    <section id="screenshots">
+      <p class="eyebrow">PRODUCT SCREENSHOTS</p>
+      <h2>تصاویر بخش‌های مختلف پروژه</h2>
+      <p>این تصاویر از نسخه محلی محصول گرفته شده‌اند و برای معرفی public workflow استفاده می‌شوند، بدون اینکه کد خصوصی یا secrets منتشر شوند.</p>
+      <div class="shots">
+        <article class="shot">
+          <img src="assets/homepage.png" alt="Adaptive News AI homepage for asking AI about news" loading="lazy">
+          <div><h3>AI News Homepage</h3><p>صفحه اصلی برای پرسیدن سوال خبری از AI روی دیتاست کرالر.</p></div>
+        </article>
+        <article class="shot">
+          <img src="assets/developer.png" alt="Adaptive News developer portal with API keys and plans" loading="lazy">
+          <div><h3>Developer Portal</h3><p>ثبت‌نام، پلن، API key و برنامه‌ریزی خزش برای توسعه‌دهنده‌ها.</p></div>
+        </article>
+        <article class="shot">
+          <img src="assets/panel.png" alt="Adaptive News technical crawler panel with reports and AI status" loading="lazy">
+          <div><h3>Technical Panel</h3><p>پنل فنی برای اهداف خزش، AI providers، گزارش‌ها و وضعیت اجرا.</p></div>
+        </article>
+      </div>
+    </section>
     <section>
       <h2>Private Boundary</h2>
       <p>Source code, credentials, local SQLite databases, panel config, and raw data remain private. Public docs only explain goals, architecture, and integration flow.</p>
       <code>Private core + Public workflow + Developer API</code>
     </section>
+    <section>
+      <p class="eyebrow">FAQ</p>
+      <h2>پرسش‌های رایج</h2>
+      <div class="grid">
+        <div class="card"><strong>آیا کد عمومی است؟</strong><p>نه. فقط workflow و صفحه معرفی عمومی هستند؛ کدبیس اصلی private می‌ماند.</p></div>
+        <div class="card"><strong>AI از چه داده‌ای جواب می‌دهد؟</strong><p>از دیتاستی که کرالر از سایت‌های خبری جمع‌آوری کرده است.</p></div>
+        <div class="card"><strong>Developer API چیست؟</strong><p>مسیر ثبت‌نام، دریافت API key، انتخاب پلن و تعریف برنامه خزش برای توسعه‌دهندگان.</p></div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
-

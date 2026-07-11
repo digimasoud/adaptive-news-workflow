@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digimasoud.github.io/adaptive-news-workflow/sitemap.xml
