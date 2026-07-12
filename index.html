@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Adaptive News AI | Private Crawler and News API</title>
   <meta name="description" content="Private news intelligence infrastructure for adaptive crawling, AI enrichment, managed crawl IPs, persistent scheduling, and a scoped Developer API.">
   <meta name="keywords" content="Adaptive News AI, adaptive news crawler, news intelligence API, AI news extraction, crawl scheduler, proxy rotation, publisher taxonomy, private news platform">
@@ -86,6 +86,7 @@
             "Scoped API keys, quotas, and usage metering",
             "Private JSONL and CSV news datasets",
             "English and Persian product interfaces",
+            "Mobile-first responsive public product experience",
             "Operator reports, logs, feedback, and health monitoring"
           ]
         },
@@ -149,10 +150,12 @@
 
     * { box-sizing: border-box; letter-spacing: 0; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--paper); color: var(--ink); }
+    body { margin: 0; overflow-x: hidden; background: var(--paper); color: var(--ink); }
     a { color: inherit; }
-    img { display: block; max-width: 100%; }
-    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    img { display: block; max-width: 100%; height: auto; }
+    p, li, a, summary { overflow-wrap: anywhere; }
+    main section[id] { scroll-margin-top: 84px; }
+    .shell { width: min(1180px, calc(100% - 40px - env(safe-area-inset-left) - env(safe-area-inset-right))); margin: 0 auto; }
 
     .site-header {
       position: sticky;
@@ -187,7 +190,7 @@
 
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-links a { color: #35423f; font-size: 14px; font-weight: 700; text-decoration: none; }
-    .nav-links a:hover { color: var(--green); }
+    .mobile-nav { display: none; }
 
     .button {
       min-height: 44px;
@@ -203,9 +206,7 @@
       transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
-    .button:hover { transform: translateY(-1px); }
     .button.primary { color: var(--white); background: var(--orange); }
-    .button.primary:hover { background: #a83a0b; }
     .button.dark { color: var(--white); background: var(--dark-green); }
     .button.outline { color: var(--white); border-color: rgba(255, 255, 255, 0.48); background: rgba(17, 24, 23, 0.28); }
     .button.light { color: var(--ink); background: var(--white); }
@@ -258,6 +259,13 @@
     .capability h3 { margin-bottom: 9px; font-size: 22px; }
     .capability p { margin-bottom: 0; color: #aebbb7; line-height: 1.7; }
 
+    .feature-catalog { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; border-top: 1px solid var(--line); }
+    .feature-group { padding: 30px 0; border-bottom: 1px solid var(--line); }
+    .feature-group small { display: block; margin-bottom: 10px; color: var(--green); font-weight: 900; text-transform: uppercase; }
+    .feature-group h3 { margin-bottom: 16px; font-size: 24px; }
+    .feature-group ul { margin: 0; padding-left: 20px; display: grid; gap: 10px; color: var(--muted); line-height: 1.65; }
+    .feature-group li::marker { color: var(--orange); }
+
     .screens { display: grid; gap: 22px; }
     .screen {
       display: grid;
@@ -304,6 +312,21 @@
 
     @media (max-width: 980px) {
       .nav-links a:not(.button) { display: none; }
+      .site-header { height: auto; }
+      .mobile-nav {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        overflow-x: auto;
+        padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+        background: var(--white);
+        border-top: 1px solid var(--line);
+        scrollbar-width: none;
+      }
+      .mobile-nav::-webkit-scrollbar { display: none; }
+      .mobile-nav a { min-height: 44px; display: inline-flex; align-items: center; flex: 0 0 auto; color: #35423f; font-size: 13px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+      main section[id] { scroll-margin-top: 124px; }
       .hero { min-height: 620px; }
       h1 { font-size: 56px; }
       .proof-grid { grid-template-columns: 1fr 1fr; }
@@ -317,8 +340,9 @@
     }
 
     @media (max-width: 640px) {
-      .shell { width: min(100% - 28px, 1180px); }
-      .site-header, .nav { min-height: 64px; height: 64px; }
+      .shell { width: min(1180px, calc(100% - 28px - env(safe-area-inset-left) - env(safe-area-inset-right))); }
+      .site-header { min-height: 112px; height: auto; }
+      .nav { min-height: 64px; height: 64px; }
       .brand span:last-child { display: none; }
       .nav { gap: 10px; }
       .nav-links { gap: 8px; }
@@ -329,7 +353,7 @@
       h1 { font-size: 44px; }
       .hero-copy { font-size: 17px; }
       .hero-actions .button { width: 100%; }
-      .proof-grid, .workflow, .capability-grid { grid-template-columns: 1fr; }
+      .proof-grid, .workflow, .capability-grid, .feature-catalog { grid-template-columns: 1fr; }
       .proof-item { min-height: 96px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.13); }
       .workflow-step + .workflow-step { padding-left: 0; border-left: 0; }
       .step-number { margin-bottom: 18px; }
@@ -338,9 +362,32 @@
       .contact h2 { font-size: 38px; }
       .screen-copy { padding: 26px; }
       .screen-copy h3 { font-size: 25px; }
+      .feature-group { padding: 26px 0; }
+      .feature-group h3 { font-size: 22px; }
+      .faq-list summary { min-height: 44px; display: flex; align-items: center; font-size: 18px; }
       .boundary { grid-template-columns: 1fr; }
       .boundary div + div { border-left: 0; border-top: 1px solid #42504d; }
       .footer-row { align-items: flex-start; flex-direction: column; }
+      footer { padding-bottom: max(28px, env(safe-area-inset-bottom)); }
+    }
+
+    @media (max-width: 380px) {
+      .nav-links .button { padding: 8px 9px; font-size: 11px; }
+      h1 { font-size: 40px; }
+      .hero-copy { font-size: 16px; }
+      .section-head h2, .security-band h2 { font-size: 31px; }
+      .contact h2 { font-size: 34px; }
+    }
+
+    @media (hover: hover) {
+      .button:hover { transform: translateY(-1px); }
+      .button.primary:hover { background: #a83a0b; }
+      .nav-links a:hover, .mobile-nav a:hover { color: var(--green); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
     }
   </style>
 </head>
@@ -353,11 +400,20 @@
       </a>
       <div class="nav-links">
         <a href="#workflow">Workflow</a>
+        <a href="#features">Features</a>
         <a href="#product">Product</a>
         <a href="#security">Security</a>
         <a href="#faq">FAQ</a>
         <a class="button primary" href="#contact">Request customization</a>
       </div>
+    </nav>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#workflow">Workflow</a>
+      <a href="#features">Features</a>
+      <a href="#product">Product</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -418,6 +474,107 @@
           <article class="capability"><small>Developer platform</small><h3>Authenticated dataset access</h3><p>Hashed API keys, scopes, search and taxonomy filters, monthly quotas, rate limits, and usage reporting.</p></article>
           <article class="capability"><small>Automation</small><h3>Persistent crawl plans</h3><p>Atomic claims, run history, restart recovery, isolated seen-state databases, and quota-aware scheduling.</p></article>
           <article class="capability"><small>Operations</small><h3>Reports and feedback</h3><p>Live logs, exact HTTP codes, dataset exports, AI status, wallet warnings, and component-level bug triage.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="features">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Complete feature catalog</p>
+          <h2>Everything currently available in the platform.</h2>
+          <p>A public, implementation-aligned catalog of crawler, network, extraction, AI, API, scheduling, operator, localization, and deployment capabilities.</p>
+        </div>
+        <div class="feature-catalog">
+          <article class="feature-group">
+            <small>01 / Discovery</small>
+            <h3>Adaptive source discovery</h3>
+            <ul>
+              <li>Unlimited target sites with active-target selection and latest-check status.</li>
+              <li>robots.txt hints, declared sitemaps, sitemap indexes, news sitemaps, and common sitemap paths.</li>
+              <li>Regular XML and gzip sitemap parsing with normalized candidate URLs.</li>
+              <li>Deterministic news URL scoring with optional AI URL classification.</li>
+              <li>Seen-URL deduplication and unseen-candidate backfill when fresh selections run low.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>02 / Fetch and network</small>
+            <h3>HTTP and crawl IP operations</h3>
+            <ul>
+              <li>Configurable concurrency, timeout, user agent, article limit, sitemap limit, and score threshold.</li>
+              <li>Exact HTTP codes, status families, redirects, final URLs, content type, and request duration.</li>
+              <li>Unlimited credential-aware HTTP(S) proxies with optional direct server-IP fallback.</li>
+              <li>Request rotation and retries for transport errors, timeouts, 403, 407, and 429 responses.</li>
+              <li>Persistent health, latency, egress IP, quarantine, cooldown, blacklist, reset, and capacity reporting.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>03 / Extraction and dataset</small>
+            <h3>Publisher-aware article records</h3>
+            <ul>
+              <li>Title selection from Open Graph, Twitter, JSON-LD, HTML title, H1, and decoded URL slugs.</li>
+              <li>Canonical URL, description, language, text preview, content length, content hash, and timing fields.</li>
+              <li>Publisher categories and tags from article metadata, keywords, news keywords, and JSON-LD.</li>
+              <li>Historical title and taxonomy backfill for previously collected records.</li>
+              <li>Private append-only JSONL, on-demand CSV export, raw HTML retention, and optional ingestion submission.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>04 / AI provider layer</small>
+            <h3>Multi-provider AI routing</h3>
+            <ul>
+              <li>Unlimited providers with independent API keys, base URLs, models, and enabled states.</li>
+              <li>Separate routing for URL classification, sitemap analysis, article extraction, and summarization.</li>
+              <li>Responses-compatible structured extraction for summaries, entities, and topical tags.</li>
+              <li>Provider health, last HTTP status, last check, last error, missing-key, quota, and wallet warnings.</li>
+              <li>Graceful deterministic crawling and base record storage when optional AI is unavailable.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>05 / Developer platform</small>
+            <h3>Authenticated news APIs</h3>
+            <ul>
+              <li>Developer signup, login, account sessions, plan selection, and self-service dashboard.</li>
+              <li>One-time key display, hashed secret storage, scopes, revocation state, and last-use tracking.</li>
+              <li>X-API-Key and Bearer authentication for paginated list, article detail, usage, and crawl-plan APIs.</li>
+              <li>Dataset search plus source, publisher category, and publisher tag filters without raw HTML exposure.</li>
+              <li>Per-minute rate limits, monthly quotas, remaining usage, and plan-based crawl-plan limits.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>06 / Automation</small>
+            <h3>Persistent crawl scheduling</h3>
+            <ul>
+              <li>Built-in hourly, daily, and weekly scheduler with configurable polling and crawl limits.</li>
+              <li>Atomic due-plan claims to prevent duplicate execution.</li>
+              <li>Independent SQLite seen-state for every scheduled plan.</li>
+              <li>Run history with completed, completed-with-errors, failed, interrupted, and quota-exceeded states.</li>
+              <li>Restart recovery, next-run calculation, fetched-article metering, and monthly quota enforcement.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>07 / Operator experience</small>
+            <h3>Control, reports, and feedback</h3>
+            <ul>
+              <li>Dashboard, Targets, AI Providers, Crawl IPs, Settings, and Reports views.</li>
+              <li>Live crawl events, service health, target status, AI status, IP health, and last-run summaries.</li>
+              <li>Dataset counts, recent-record preview, titles, taxonomy, exact status codes, status families, and CSV export.</li>
+              <li>Contextual bug reporting on current and dynamically added interface sections.</li>
+              <li>Administrator unresolved inbox, per-component counts, resolution actions, and public submission throttling.</li>
+            </ul>
+          </article>
+          <article class="feature-group">
+            <small>08 / Product and deployment</small>
+            <h3>Public experience, localization, and hosting</h3>
+            <ul>
+              <li>AI news question homepage with local dataset fallback and language-aware answers.</li>
+              <li>Complete English LTR and Persian RTL interfaces with persisted language selection.</li>
+              <li>Original article titles, source data, and user input remain untranslated and dataset-safe.</li>
+              <li>Mobile-first layouts with safe-area support, 44px touch navigation, stable responsive images, and reduced-motion support.</li>
+              <li>Self-hosted Persian font, Docker, Docker Compose, CLI, persistent volumes, and lean single-server operation.</li>
+              <li>Private source boundary with public SEO workflow, screenshots, canonical metadata, structured data, sitemap, and IndexNow.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
