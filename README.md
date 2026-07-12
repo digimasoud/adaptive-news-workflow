@@ -94,12 +94,20 @@ Detailed flow:
 
 This public repo intentionally excludes source code, credentials, private config, local SQLite databases, and raw crawl data.
 
+## Commercial Requests
+
+The website's `Request customization` action opens a structured public issue for custom deployments, source onboarding, AI-provider routing, API changes, reports, and branded experiences. Do not include credentials, private datasets, or confidential details in a public issue.
+
+A dedicated domain mailbox is the recommended long-term channel for private commercial conversations. No email address is published until a verified business mailbox is configured.
+
 ## SEO Assets
 
 - `index.html`: public project page.
 - `robots.txt`: crawler access rules.
 - `sitemap.xml`: sitemap for GitHub Pages.
+- `favicon.svg`: Adaptive News AI browser icon.
 - `assets/homepage.png`: social preview and homepage screenshot.
 - `assets/developer.png`: developer portal screenshot.
 - `assets/panel.png`: technical panel screenshot.
 - `assets/workflow.svg`: architecture/workflow diagram.
+- `.github/ISSUE_TEMPLATE/customization-request.yml`: structured commercial request form.
