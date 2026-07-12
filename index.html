@@ -81,6 +81,8 @@
             "Adaptive robots and sitemap discovery",
             "Persistent hourly, daily, and weekly scheduling",
             "Managed proxy and crawl IP rotation",
+            "Host-scoped authorized premium source sessions",
+            "Customer self-hosting with private versioned updates",
             "Resilient title and publisher taxonomy extraction",
             "AI summaries, entities, and topical tags",
             "Scoped API keys, quotas, and usage metering",
@@ -118,6 +120,11 @@
               "@type": "Question",
               "name": "Can Adaptive News AI run on one private server?",
               "acceptedAnswer": {"@type": "Answer", "text": "Yes. The platform is designed for a lean Docker-based single-server deployment with persistent local state and optional integration with a separate ingestion service."}
+            },
+            {
+              "@type": "Question",
+              "name": "Can it crawl sources that require an authorized account?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Yes. Operators can attach host-scoped Basic, Bearer, custom-header, or existing session-cookie profiles to targets they are authorized to access. The crawler does not bypass paywalls or publisher controls."}
             },
             {
               "@type": "Question",
@@ -491,7 +498,7 @@
             <h3>Adaptive source discovery</h3>
             <ul>
               <li>Unlimited target sites with active-target selection and latest-check status.</li>
-              <li>robots.txt hints, declared sitemaps, sitemap indexes, news sitemaps, and common sitemap paths.</li>
+              <li>robots.txt hints, homepage sitemap declarations, sitemap indexes, WordPress paths, Google News paths, and common sitemap URLs.</li>
               <li>Regular XML and gzip sitemap parsing with normalized candidate URLs.</li>
               <li>Deterministic news URL scoring with optional AI URL classification.</li>
               <li>Seen-URL deduplication and unseen-candidate backfill when fresh selections run low.</li>
@@ -506,6 +513,7 @@
               <li>Unlimited credential-aware HTTP(S) proxies with optional direct server-IP fallback.</li>
               <li>Request rotation and retries for transport errors, timeouts, 403, 407, and 429 responses.</li>
               <li>Persistent health, latency, egress IP, quarantine, cooldown, blacklist, reset, and capacity reporting.</li>
+              <li>Per-target Basic, Bearer, custom-header, and session-cookie access with explicit host allowlists and cross-host redirect stripping.</li>
             </ul>
           </article>
           <article class="feature-group">
@@ -571,7 +579,8 @@
               <li>Complete English LTR and Persian RTL interfaces with persisted language selection.</li>
               <li>Original article titles, source data, and user input remain untranslated and dataset-safe.</li>
               <li>Mobile-first layouts with safe-area support, 44px touch navigation, stable responsive images, and reduced-motion support.</li>
-              <li>Self-hosted Persian font, Docker, Docker Compose, CLI, persistent volumes, and lean single-server operation.</li>
+              <li>Self-hosted Persian font, Docker, Docker Compose, CLI, persistent volumes, liveness checks, and lean single-server operation.</li>
+              <li>Customer-owned deployment from a private versioned container or guarded fast-forward Git updates.</li>
               <li>Private source boundary with public SEO workflow, screenshots, canonical metadata, structured data, sitemap, and IndexNow.</li>
             </ul>
           </article>
@@ -630,6 +639,7 @@
           <details><summary>How does crawl IP management work?</summary><p>The operator can configure multiple HTTP or HTTPS proxies, retain direct server fallback, rotate requests, quarantine unhealthy endpoints, detect blacklist conditions, and review capacity recommendations.</p></details>
           <details><summary>What does the Developer API expose?</summary><p>Scoped API keys provide public-safe article records, search and source taxonomy filters, usage reporting, and crawl-plan operations. Raw HTML and private operator state are excluded.</p></details>
           <details><summary>Can Adaptive News AI run on one private server?</summary><p>Yes. The platform is designed for a lean Docker-based single-server deployment with persistent local state and optional integration with a separate ingestion service.</p></details>
+          <details><summary>Can it crawl sources that require an authorized account?</summary><p>Yes. Operators can attach host-scoped Basic, Bearer, custom-header, or existing session-cookie profiles to targets they are authorized to access. The crawler does not bypass paywalls or publisher controls.</p></details>
           <details><summary>Is the crawler source code public?</summary><p>No. The implementation, credentials, datasets, and operational configuration remain private. This public site documents the product workflow and integration model.</p></details>
         </div>
       </div>

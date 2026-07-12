@@ -69,6 +69,10 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 Target sites -> robots/sitemaps -> crawl IP pool -> adaptive crawler -> metadata/AI enrichment -> local dataset -> AI answers and Developer API
 ```
 
+Customer deployments can run on their own infrastructure from a private versioned container.
+Authorized source accounts can be attached per target with host-scoped sessions; the product
+does not bypass paywalls or publisher access controls.
+
 Detailed flow:
 
 1. Discover target websites through `robots.txt`, sitemap indexes, and news sitemap paths.
