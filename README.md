@@ -105,9 +105,30 @@ A dedicated domain mailbox is the recommended long-term channel for private comm
 - `index.html`: public project page.
 - `robots.txt`: crawler access rules.
 - `sitemap.xml`: sitemap for GitHub Pages.
+- `llms.txt`: concise product and data-boundary context for AI agents.
+- `404.html`: index-safe custom not-found page.
 - `favicon.svg`: Adaptive News AI browser icon.
 - `assets/homepage.png`: social preview and homepage screenshot.
+- `assets/og-image.png`: dedicated `1200x630` Open Graph and Twitter share image.
 - `assets/developer.png`: developer portal screenshot.
 - `assets/panel.png`: technical panel screenshot.
 - `assets/workflow.svg`: architecture/workflow diagram.
 - `.github/ISSUE_TEMPLATE/customization-request.yml`: structured commercial request form.
+
+## Search Launch Checklist
+
+Implemented in the public site:
+
+- English title, description, canonical URL, robots directives, and semantic heading structure.
+- Open Graph and Twitter metadata with a dedicated `1200x630` share image.
+- `WebSite`, `WebPage`, `ImageObject`, `SoftwareApplication`, and visible `FAQPage` JSON-LD.
+- Discoverable HTML images with dimensions, descriptive alt text, lazy loading, and image sitemap entries.
+- Root sitemap, robots declaration, favicon, HTTPS GitHub Pages hosting, custom 404, and `llms.txt`.
+- Responsive layouts verified at desktop and mobile widths.
+
+External setup still requires the site owner:
+
+- Add the final custom domain and enforce HTTPS after DNS is configured.
+- Verify ownership in Google Search Console and Bing Webmaster Tools.
+- Submit `https://digimasoud.github.io/adaptive-news-workflow/sitemap.xml` and request indexing for the canonical page.
+- Configure a real domain mailbox before publishing commercial email contact details.
