@@ -1,0 +1,27 @@
+# Adaptive News AI
+
+> Adaptive News AI is private news intelligence infrastructure for adaptive crawling, managed crawl IPs, AI enrichment, persistent scheduling, and controlled Developer API delivery.
+
+Canonical product page: https://digimasoud.github.io/adaptive-news-workflow/
+Public workflow repository: https://github.com/digimasoud/adaptive-news-workflow
+Project owner: https://github.com/digimasoud
+Customization requests: https://github.com/digimasoud/adaptive-news-workflow/issues/new?template=customization-request.yml
+
+## Core capabilities
+
+- Discover news URLs from robots.txt, sitemap indexes, news sitemaps, and common sitemap paths.
+- Score candidate URLs with deterministic heuristics and optional AI classification.
+- Rotate managed HTTP(S) proxies with direct fallback, quarantine, blacklist detection, and capacity reporting.
+- Extract resilient titles, canonical URLs, language, publisher categories, and source tags.
+- Enrich records with optional AI summaries, entities, and topical tags.
+- Run persistent hourly, daily, and weekly crawl plans with isolated URL state and restart recovery.
+- Serve public-safe records through scoped API keys with search, taxonomy filters, rate limits, and monthly quotas.
+- Operate targets, AI providers, crawl IPs, HTTP reports, logs, exports, and bug feedback from a bilingual control panel.
+
+## Public and private boundary
+
+The product workflow, feature documentation, screenshots, and integration model are public. Source code, credentials, proxy URLs, raw HTML, private datasets, SQLite state, and operator configuration remain private.
+
+## Commercial customization
+
+Custom source onboarding, private deployment, ingestion integration, provider routing, API schemas, reporting, and branded experiences are available through the structured public request form. Do not include credentials or confidential data in a public issue.
