@@ -17,6 +17,7 @@ Customization requests: https://github.com/digimasoud/adaptive-news-workflow/iss
 - Run persistent hourly, daily, and weekly crawl plans with isolated URL state and restart recovery.
 - Serve public-safe records through scoped API keys with search, taxonomy filters, rate limits, and monthly quotas.
 - Operate targets, AI providers, crawl IPs, HTTP reports, logs, exports, and bug feedback from a bilingual control panel.
+- Use the public product page across mobile and desktop with safe-area support, touch navigation, stable responsive media, and reduced-motion handling.
 
 ## Public and private boundary
 
