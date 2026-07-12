@@ -1,22 +1,12 @@
-# Adaptive News AI Public Workflow
+# Adaptive News AI Product Overview
 
-Public, SEO-friendly workflow documentation for **Adaptive News AI**.
-
-This repository does **not** publish the private crawler codebase. It explains the product workflow, goals, architecture, screenshots, and developer integration model so the project can be shared publicly without exposing source code, secrets, local databases, or raw crawl data.
+Product, architecture, feature, and integration documentation for **Adaptive News AI**.
 
 Public page:
 
 ```text
 https://digimasoud.github.io/adaptive-news-workflow/
 ```
-
-Private implementation repo:
-
-```text
-https://github.com/digimasoud/adaptive-news-crawler
-```
-
-The implementation repository is private. This public repository is the shareable product/workflow layer.
 
 ## Product Summary
 
@@ -27,7 +17,7 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 | AI News Homepage | Public users ask AI questions about the crawled news dataset. |
 | Developer Portal | Developers sign up, choose a plan, create API keys, and define crawl plans. |
 | Technical Panel | Operators manage targets, AI providers, HTTP status, reports, logs, and dataset access. |
-| Public Workflow | Search engines and collaborators see an SEO-safe explanation while source remains private. |
+| Product Preview | Prospective users create a read-only account and inspect a realistic operations dashboard. |
 
 ## What It Does
 
@@ -48,15 +38,6 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 - Show public screenshots for the homepage, developer portal, and technical crawler panel.
 - Publish SEO metadata, Open Graph tags, `robots.txt`, `sitemap.xml`, and JSON-LD structured data.
 
-## What Stays Private
-
-- Source code.
-- `.env` files and API keys.
-- Crawler keys and ingestion credentials.
-- Local SQLite databases.
-- Raw HTML datasets when licensing/source terms are unclear.
-- Internal implementation details that are not needed for public product discovery.
-
 ## Screenshots
 
 - `assets/homepage.png`: AI news question homepage.
@@ -69,7 +50,7 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 Target sites -> robots/sitemaps -> crawl IP pool -> adaptive crawler -> metadata/AI enrichment -> local dataset -> AI answers and Developer API
 ```
 
-Customer deployments can run on their own infrastructure from a private versioned container.
+Customer deployments can run on their own infrastructure from a versioned container.
 Authorized source accounts can be attached per target with host-scoped sessions; the product
 does not bypass paywalls or publisher access controls.
 
@@ -83,7 +64,7 @@ Detailed flow:
 2. Score URLs with deterministic heuristics and optional AI classification.
 3. Fetch pages through the proxy/direct-IP pool while recording status, retries, and block health.
 4. Extract titles, categories, tags, canonical URLs, and optional AI enrichment.
-5. Store private records locally and expose only public-safe fields through the API.
+5. Store records locally and expose controlled fields through the API.
 6. Answer news questions from the crawled dataset.
 7. Let developers create scoped API keys and persistent crawl plans.
 8. Enforce per-minute and monthly plan usage limits.
@@ -96,13 +77,9 @@ Detailed flow:
 - `active`: Scheduled hourly/daily/weekly crawl plans.
 - `active`: 100+ Persian and international news sources.
 - `active`: AI extraction, entities, tags, and multilingual summaries.
-- `done`: Public workflow with private source code.
+- `done`: Read-only email/password product preview.
 - `active`: Usage metering, rate limits, and billing readiness.
 - `active`: Crawl IP rotation, health, blacklist, and capacity management.
-
-## Private Boundary
-
-This public repo intentionally excludes source code, credentials, private config, local SQLite databases, and raw crawl data.
 
 ## Commercial Requests
 
@@ -115,7 +92,7 @@ A dedicated domain mailbox is the recommended long-term channel for private comm
 - `index.html`: public project page.
 - `robots.txt`: crawler access rules.
 - `sitemap.xml`: sitemap for GitHub Pages.
-- `llms.txt`: concise product and data-boundary context for AI agents.
+- `llms.txt`: concise product and integration context for AI agents.
 - `404.html`: index-safe custom not-found page.
 - `4dcf971ac699cadc2f08a36719d2c2af.txt`: IndexNow ownership key for this GitHub Pages path.
 - `favicon.svg`: Adaptive News AI browser icon.
