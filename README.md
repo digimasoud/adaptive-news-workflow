@@ -43,6 +43,8 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 - Serve a scoped, rate-limited Developer API with dataset filters and usage reporting.
 - Switch every product surface between Persian RTL and English LTR.
 - Collect component-level bug reports for operator triage.
+- Publish a complete implementation-aligned feature catalog across eight platform areas.
+- Provide mobile-first navigation, safe-area handling, 44px touch targets, stable responsive media, and reduced-motion support.
 - Show public screenshots for the homepage, developer portal, and technical crawler panel.
 - Publish SEO metadata, Open Graph tags, `robots.txt`, `sitemap.xml`, and JSON-LD structured data.
 
