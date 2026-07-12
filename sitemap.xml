@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://digimasoud.github.io/adaptive-news-workflow/</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-12</lastmod>
+    <image:image>
+      <image:loc>https://digimasoud.github.io/adaptive-news-workflow/assets/og-image.png</image:loc>
+      <image:title>Adaptive News AI private crawler and Developer API</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png</image:loc>
+      <image:title>Adaptive News AI news question homepage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://digimasoud.github.io/adaptive-news-workflow/assets/developer.png</image:loc>
+      <image:title>Adaptive News AI Developer Portal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://digimasoud.github.io/adaptive-news-workflow/assets/panel.png</image:loc>
+      <image:title>Adaptive News AI technical control panel</image:title>
+    </image:image>
   </url>
 </urlset>
