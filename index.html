@@ -1,130 +1,400 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adaptive News AI | Public Workflow, News AI Chat, Developer API</title>
-  <meta name="description" content="Adaptive News AI combines private adaptive crawling, proxy and IP rotation, AI extraction, scheduled crawl plans, a bilingual news chat, and a metered Developer API in one lean platform core.">
-  <meta name="keywords" content="Adaptive News AI, AI news chat, adaptive news crawler, news API, crawl scheduler, proxy rotation, AI extraction, publisher taxonomy, Persian news platform">
+  <title>Adaptive News AI | Private News Crawler, AI Enrichment and Developer API</title>
+  <meta name="description" content="Adaptive News AI is a private, production-oriented news intelligence core with adaptive crawling, managed crawl IPs, AI enrichment, persistent scheduling, and a metered Developer API.">
+  <meta name="keywords" content="Adaptive News AI, adaptive news crawler, news intelligence API, AI news extraction, crawl scheduler, proxy rotation, publisher taxonomy, private news platform">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#111817">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://digimasoud.github.io/adaptive-news-workflow/">
-  <meta property="og:title" content="Adaptive News AI Public Workflow">
-  <meta property="og:description" content="Private crawler core with proxy rotation, AI enrichment, persistent scheduling, a bilingual news experience, and a metered Developer API.">
+  <meta property="og:title" content="Adaptive News AI - Private News Intelligence Infrastructure">
+  <meta property="og:description" content="Discover, crawl, enrich, schedule, and serve news data through one lean private core and a scoped Developer API.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://digimasoud.github.io/adaptive-news-workflow/">
   <meta property="og:image" content="https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png">
-  <meta property="og:image:alt" content="Adaptive News AI homepage with AI news question interface">
+  <meta property="og:image:alt" content="Adaptive News AI news question interface and project dashboard">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Adaptive News AI Public Workflow">
-  <meta name="twitter:description" content="Adaptive crawling, managed crawl IPs, AI-enriched news data, scheduled plans, and a Developer API with the source kept private.">
+  <meta name="twitter:title" content="Adaptive News AI - Private News Intelligence Infrastructure">
+  <meta name="twitter:description" content="Adaptive crawling, managed IPs, AI-enriched news data, persistent schedules, and a metered Developer API.">
   <meta name="twitter:image" content="https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Adaptive News AI",
-      "applicationCategory": "NewsApplication",
+      "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "description": "A bilingual AI news and Developer API workflow backed by private adaptive crawling, proxy rotation, persistent scheduling, and AI-enriched news data.",
+      "description": "Private news intelligence infrastructure for adaptive crawling, AI enrichment, persistent scheduling, and metered API delivery.",
       "url": "https://digimasoud.github.io/adaptive-news-workflow/",
       "image": "https://digimasoud.github.io/adaptive-news-workflow/assets/homepage.png",
+      "codeRepository": "https://github.com/digimasoud/adaptive-news-workflow",
+      "sameAs": ["https://github.com/digimasoud"],
       "offers": {
         "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+        "availability": "https://schema.org/InStock",
+        "url": "https://github.com/digimasoud/adaptive-news-workflow/issues/new?template=customization-request.yml"
       },
       "featureList": [
-        "AI news question homepage",
-        "Private crawler core",
-        "Public workflow documentation",
-        "Developer API keys",
-        "Persistent crawl scheduling",
-        "Proxy and crawl IP management",
-        "AI summary, entity, and tag extraction",
-        "Publisher category and tag extraction",
-        "Scoped and metered Developer API",
-        "Persian RTL and English LTR interfaces",
-        "Crawler control panel"
+        "Adaptive robots and sitemap discovery",
+        "Persistent hourly, daily, and weekly scheduling",
+        "Managed proxy and crawl IP rotation",
+        "Resilient title and publisher taxonomy extraction",
+        "AI summaries, entities, and topical tags",
+        "Scoped API keys, quotas, and usage metering",
+        "Private JSONL and CSV news datasets",
+        "English and Persian product interfaces",
+        "Operator reports, logs, feedback, and health monitoring"
       ]
     }
   </script>
   <style>
-    :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #111; color: #f3f3f1; }
-    body { margin: 0; background: radial-gradient(circle at 0 0, rgba(255,122,26,.16), transparent 34%), #111; }
-    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0; display: grid; gap: 22px; }
-    section { background: #272727; border: 1px solid #3c3c3f; border-radius: 12px; padding: 24px; }
-    h1 { font-size: clamp(34px, 6vw, 72px); line-height: 1.1; margin: 0; }
-    h2 { margin: 0 0 12px; }
-    p, li { color: #b7b7b7; line-height: 2; }
-    .eyebrow { color: #ff7a1a; font-weight: 900; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    .card { background: #1f1f22; border: 1px solid #3c3c3f; border-radius: 10px; padding: 16px; }
-    .shot { background: #1f1f22; border: 1px solid #3c3c3f; border-radius: 12px; overflow: hidden; }
-    .shot div { padding: 14px; }
-    .shot h3 { margin: 0 0 6px; }
-    img { max-width: 100%; border-radius: 12px; border: 1px solid #3c3c3f; }
-    .shot img { border: 0; border-radius: 0; display: block; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
-    code { direction: ltr; display: block; background: #1b1b1d; border: 1px solid #3c3c3f; border-radius: 8px; padding: 14px; color: #ffcf70; }
-    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; border-radius: 8px; padding: 10px 14px; background: #ff7a1a; color: #111; font-weight: 900; text-decoration: none; }
-    .button.secondary { color: #f3f3f1; background: #1f1f22; border: 1px solid #3c3c3f; }
-    @media (max-width: 900px) { .grid, .shots { grid-template-columns: 1fr; } }
+    :root {
+      color-scheme: light;
+      --ink: #111817;
+      --muted: #52605d;
+      --paper: #f5f7f8;
+      --white: #ffffff;
+      --line: #d8dfdd;
+      --orange: #f36b21;
+      --green: #087f68;
+      --blue: #2457d6;
+      --dark-green: #102521;
+      --hero-overlay: rgba(8, 14, 13, 0.78);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    * { box-sizing: border-box; letter-spacing: 0; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      height: 72px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 850; }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      color: var(--white);
+      background: var(--dark-green);
+      border-bottom: 4px solid var(--orange);
+      font-size: 13px;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: #35423f; font-size: 14px; font-weight: 700; text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+    .button.primary { color: var(--white); background: var(--orange); }
+    .button.primary:hover { background: #d95313; }
+    .button.dark { color: var(--white); background: var(--dark-green); }
+    .button.outline { color: var(--white); border-color: rgba(255, 255, 255, 0.48); background: rgba(17, 24, 23, 0.28); }
+    .button.light { color: var(--ink); background: var(--white); }
+
+    .hero {
+      min-height: 680px;
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: flex-end;
+      color: var(--white);
+      background: var(--ink) url("assets/homepage.png") center top / cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hero-overlay); }
+    .hero-content { width: min(760px, 100%); padding: 112px 0 92px; }
+    .eyebrow { margin: 0 0 18px; color: #ff9a61; font-size: 13px; font-weight: 900; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin-bottom: 24px; font-size: 72px; line-height: 1.02; }
+    .hero-copy { max-width: 690px; margin-bottom: 30px; color: #dce5e2; font-size: 20px; line-height: 1.7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .proof-band { color: var(--white); background: var(--dark-green); border-bottom: 5px solid var(--orange); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .proof-item { min-height: 118px; padding: 26px 24px; border-right: 1px solid rgba(255, 255, 255, 0.13); }
+    .proof-item:last-child { border-right: 0; }
+    .proof-item strong { display: block; margin-bottom: 8px; font-size: 17px; }
+    .proof-item span { color: #b8cbc6; font-size: 14px; line-height: 1.6; }
+
+    .section { padding: 92px 0; }
+    .section.white { background: var(--white); }
+    .section.dark { color: var(--white); background: #18201f; }
+    .section-head { max-width: 750px; margin-bottom: 42px; }
+    .section-head h2 { margin-bottom: 16px; font-size: 44px; line-height: 1.14; }
+    .section-head p { margin-bottom: 0; color: var(--muted); font-size: 18px; line-height: 1.75; }
+    .dark .section-head p { color: #bac5c2; }
+
+    .workflow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+    .workflow-step { min-height: 210px; padding: 24px 20px 24px 0; border-bottom: 1px solid var(--line); }
+    .workflow-step + .workflow-step { padding-left: 20px; border-left: 1px solid var(--line); }
+    .step-number { display: block; margin-bottom: 48px; color: var(--orange); font-size: 13px; font-weight: 900; }
+    .workflow-step h3 { margin-bottom: 10px; font-size: 18px; }
+    .workflow-step p { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    .capability-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; border-top: 1px solid #3b4744; }
+    .capability { min-height: 142px; padding: 26px 0; border-bottom: 1px solid #3b4744; }
+    .capability small { display: block; margin-bottom: 12px; color: #66d2ba; font-weight: 850; text-transform: uppercase; }
+    .capability h3 { margin-bottom: 9px; font-size: 22px; }
+    .capability p { margin-bottom: 0; color: #aebbb7; line-height: 1.7; }
+
+    .screens { display: grid; gap: 22px; }
+    .screen {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.75fr);
+      min-height: 400px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .screen:nth-child(even) { grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.65fr); }
+    .screen:nth-child(even) img { order: 2; }
+    .screen img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; object-position: top left; }
+    .screen-copy { display: flex; flex-direction: column; justify-content: center; padding: 38px; }
+    .screen-copy small { margin-bottom: 16px; color: var(--blue); font-weight: 900; text-transform: uppercase; }
+    .screen-copy h3 { margin-bottom: 14px; font-size: 30px; }
+    .screen-copy p { margin-bottom: 0; color: var(--muted); line-height: 1.75; }
+
+    .security-band { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .security-band h2 { margin-bottom: 18px; font-size: 42px; }
+    .security-band p { margin-bottom: 0; color: #becac7; font-size: 17px; line-height: 1.8; }
+    .boundary { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #42504d; border-radius: 8px; overflow: hidden; }
+    .boundary div { padding: 28px; }
+    .boundary div + div { border-left: 1px solid #42504d; }
+    .boundary strong { display: block; margin-bottom: 12px; color: #79ddc6; }
+    .boundary span { color: #b6c3bf; font-size: 14px; line-height: 1.7; }
+
+    .contact { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 64px; align-items: center; }
+    .contact h2 { margin-bottom: 20px; font-size: 48px; line-height: 1.1; }
+    .contact p { max-width: 700px; margin-bottom: 26px; color: var(--muted); font-size: 18px; line-height: 1.8; }
+    .contact-aside { padding-left: 28px; border-left: 4px solid var(--orange); }
+    .contact-aside strong { display: block; margin-bottom: 10px; font-size: 17px; }
+    .contact-aside span { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .contact-note { margin-top: 14px; color: #6b7774; font-size: 12px; line-height: 1.6; }
+
+    footer { padding: 28px 0; color: #b9c3c0; background: var(--ink); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 13px; }
+    .footer-row a { color: var(--white); font-weight: 750; text-decoration: none; }
+
+    @media (max-width: 980px) {
+      .nav-links a:not(.button) { display: none; }
+      .hero { min-height: 620px; }
+      h1 { font-size: 56px; }
+      .proof-grid { grid-template-columns: 1fr 1fr; }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .workflow { grid-template-columns: repeat(3, 1fr); }
+      .workflow-step:nth-child(4) { border-left: 0; }
+      .screen, .screen:nth-child(even) { grid-template-columns: 1fr; }
+      .screen:nth-child(even) img { order: 0; }
+      .screen img { min-height: 0; aspect-ratio: 16 / 9; }
+      .security-band, .contact { grid-template-columns: 1fr; gap: 38px; }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 28px, 1180px); }
+      .site-header, .nav { min-height: 64px; height: 64px; }
+      .brand span:last-child { display: none; }
+      .nav { gap: 10px; }
+      .nav-links { gap: 8px; }
+      .nav-links .button { min-height: 40px; padding: 8px 11px; font-size: 12px; }
+      .hero { min-height: 600px; background-position: 35% top; }
+      .hero-content { padding: 88px 0 70px; }
+      h1 { font-size: 44px; }
+      .hero-copy { font-size: 17px; }
+      .hero-actions .button { width: 100%; }
+      .proof-grid, .workflow, .capability-grid { grid-template-columns: 1fr; }
+      .proof-item { min-height: 96px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.13); }
+      .workflow-step + .workflow-step { padding-left: 0; border-left: 0; }
+      .step-number { margin-bottom: 18px; }
+      .section { padding: 68px 0; }
+      .section-head h2, .security-band h2 { font-size: 34px; }
+      .contact h2 { font-size: 38px; }
+      .screen-copy { padding: 26px; }
+      .screen-copy h3 { font-size: 25px; }
+      .boundary { grid-template-columns: 1fr; }
+      .boundary div + div { border-left: 0; border-top: 1px solid #42504d; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <section>
-      <p class="eyebrow">PUBLIC WORKFLOW</p>
-      <h1>Adaptive News AI</h1>
-      <p>کدبیس کرالر خصوصی می‌ماند، اما workflow محصول عمومی است: کشف منابع، مدیریت IP خزش، زمان‌بندی دائمی، استخراج عنوان و دسته‌بندی، غنی‌سازی AI، دیتاست و Developer API.</p>
-      <div class="cta">
-        <a class="button" href="https://github.com/digimasoud/adaptive-news-workflow">مشاهده GitHub عمومی</a>
-        <a class="button secondary" href="#screenshots">دیدن تصاویر پنل</a>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Adaptive News AI home">
+        <span class="brand-mark">AN</span>
+        <span>Adaptive News AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#workflow">Workflow</a>
+        <a href="#product">Product</a>
+        <a href="#security">Security</a>
+        <a class="button primary" href="#contact">Request customization</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell">
+        <div class="hero-content">
+          <p class="eyebrow">Private crawler core. Public product workflow.</p>
+          <h1 id="hero-title">Adaptive News AI</h1>
+          <p class="hero-copy">A lean news intelligence platform for discovering sources, running persistent crawls, enriching stories with AI, and serving controlled datasets through a Developer API.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#product">Explore the product</a>
+            <a class="button outline" href="https://github.com/digimasoud/adaptive-news-workflow">View public workflow</a>
+          </div>
+        </div>
       </div>
     </section>
-    <img src="assets/workflow.svg" alt="Adaptive News AI workflow diagram">
-    <section>
-      <h2>Workflow</h2>
-      <div class="grid">
-        <div class="card"><strong>Discover</strong><p>خواندن robots.txt، sitemap و news sitemap.</p></div>
-        <div class="card"><strong>Crawl + Enrich</strong><p>چرخش IP، ثبت HTTP، استخراج metadata و غنی‌سازی AI.</p></div>
-        <div class="card"><strong>Ask + Build</strong><p>پرسش خبری و دسترسی Developer API به دیتاست کنترل‌شده.</p></div>
+
+    <section class="proof-band" aria-label="Platform highlights">
+      <div class="shell proof-grid">
+        <div class="proof-item"><strong>Adaptive discovery</strong><span>Robots, sitemap indexes, news paths, and scored URL selection.</span></div>
+        <div class="proof-item"><strong>Persistent operations</strong><span>Hourly, daily, and weekly plans with isolated crawl state.</span></div>
+        <div class="proof-item"><strong>Controlled delivery</strong><span>Scoped API keys, plan quotas, rate limits, and usage reporting.</span></div>
+        <div class="proof-item"><strong>Private by design</strong><span>Source, credentials, raw HTML, and operator data remain private.</span></div>
       </div>
     </section>
-    <section id="screenshots">
-      <p class="eyebrow">PRODUCT SCREENSHOTS</p>
-      <h2>تصاویر بخش‌های مختلف پروژه</h2>
-      <p>این تصاویر از نسخه محلی محصول گرفته شده‌اند و برای معرفی public workflow استفاده می‌شوند، بدون اینکه کد خصوصی یا secrets منتشر شوند.</p>
-      <div class="shots">
-        <article class="shot">
-          <img src="assets/homepage.png" alt="Adaptive News AI homepage for asking AI about news" loading="lazy">
-          <div><h3>AI News Homepage</h3><p>صفحه اصلی برای پرسیدن سوال خبری از AI روی دیتاست کرالر.</p></div>
-        </article>
-        <article class="shot">
-          <img src="assets/developer.png" alt="Adaptive News developer portal with API keys and plans" loading="lazy">
-          <div><h3>Developer Portal</h3><p>ثبت‌نام، پلن، API key و برنامه‌ریزی خزش برای توسعه‌دهنده‌ها.</p></div>
-        </article>
-        <article class="shot">
-          <img src="assets/panel.png" alt="Adaptive News technical crawler panel with reports and AI status" loading="lazy">
-          <div><h3>Technical Panel</h3><p>مدیریت اهداف، AI providers، IPهای خزش، دیتاست، گزارش‌ها، باگ‌ها و وضعیت اجرا.</p></div>
-        </article>
+
+    <section class="section white" id="workflow">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">End-to-end workflow</p>
+          <h2>From an unfamiliar news site to usable, enriched data.</h2>
+          <p>The core combines deterministic crawling with optional AI decisions, keeping the baseline efficient while leaving room for source-specific intelligence.</p>
+        </div>
+        <div class="workflow">
+          <article class="workflow-step"><span class="step-number">01</span><h3>Discover</h3><p>Read robots, sitemap indexes, news sitemaps, and common paths.</p></article>
+          <article class="workflow-step"><span class="step-number">02</span><h3>Score</h3><p>Rank likely stories with URL heuristics and optional AI classification.</p></article>
+          <article class="workflow-step"><span class="step-number">03</span><h3>Fetch</h3><p>Rotate managed crawl IPs and retain HTTP, redirect, and latency history.</p></article>
+          <article class="workflow-step"><span class="step-number">04</span><h3>Extract</h3><p>Resolve titles, canonical URLs, language, categories, and source tags.</p></article>
+          <article class="workflow-step"><span class="step-number">05</span><h3>Enrich</h3><p>Add AI summaries, entities, and topical tags through routed providers.</p></article>
+          <article class="workflow-step"><span class="step-number">06</span><h3>Deliver</h3><p>Store private records and expose public-safe fields through scoped APIs.</p></article>
+        </div>
       </div>
     </section>
-    <section>
-      <h2>Private Boundary</h2>
-      <p>Source code, credentials, proxy URLs, local SQLite databases, panel config, and raw data remain private. Public docs explain the product, capabilities, architecture, and integration flow.</p>
-      <code>Private core + Public workflow + Developer API</code>
+
+    <section class="section dark" aria-labelledby="capabilities-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Operational depth</p>
+          <h2 id="capabilities-title">One compact service, without giving up control.</h2>
+          <p>Built for a pragmatic single-server deployment, with the controls a real news operation needs from day one.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability"><small>Crawl intelligence</small><h3>Source-aware discovery</h3><p>XML and gzip sitemaps, unseen URL backfill, resilient title extraction, and publisher taxonomy.</p></article>
+          <article class="capability"><small>Network resilience</small><h3>Managed crawl IP pool</h3><p>Proxy rotation, direct fallback, health history, quarantine, blacklist detection, and capacity advice.</p></article>
+          <article class="capability"><small>AI routing</small><h3>Multiple providers, multiple jobs</h3><p>Route classification, sitemap analysis, article extraction, and summarization to different endpoints and models.</p></article>
+          <article class="capability"><small>Developer platform</small><h3>Authenticated dataset access</h3><p>Hashed API keys, scopes, search and taxonomy filters, monthly quotas, rate limits, and usage reporting.</p></article>
+          <article class="capability"><small>Automation</small><h3>Persistent crawl plans</h3><p>Atomic claims, run history, restart recovery, isolated seen-state databases, and quota-aware scheduling.</p></article>
+          <article class="capability"><small>Operations</small><h3>Reports and feedback</h3><p>Live logs, exact HTTP codes, dataset exports, AI status, wallet warnings, and component-level bug triage.</p></article>
+        </div>
+      </div>
     </section>
-    <section>
-      <p class="eyebrow">FAQ</p>
-      <h2>پرسش‌های رایج</h2>
-      <div class="grid">
-        <div class="card"><strong>آیا کد عمومی است؟</strong><p>نه. فقط workflow و صفحه معرفی عمومی هستند؛ کدبیس اصلی private می‌ماند.</p></div>
-        <div class="card"><strong>AI از چه داده‌ای جواب می‌دهد؟</strong><p>از دیتاستی که کرالر از سایت‌های خبری جمع‌آوری کرده است.</p></div>
-        <div class="card"><strong>Developer API چیست؟</strong><p>مسیر ثبت‌نام، دریافت API key، انتخاب پلن و تعریف برنامه خزش برای توسعه‌دهندگان.</p></div>
+
+    <section class="section" id="product">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Product surfaces</p>
+          <h2>A focused experience for every audience.</h2>
+          <p>The public news interface, Developer Portal, and technical control panel share one platform while keeping their responsibilities clear.</p>
+        </div>
+        <div class="screens">
+          <article class="screen">
+            <img src="assets/homepage.png" alt="Adaptive News AI homepage for asking questions about collected news" loading="lazy">
+            <div class="screen-copy"><small>Public experience</small><h3>AI News Homepage</h3><p>A direct question interface backed by the collected dataset, with local search fallback when no AI provider is active.</p></div>
+          </article>
+          <article class="screen">
+            <img src="assets/developer.png" alt="Adaptive News Developer Portal with API keys, plans, and usage" loading="lazy">
+            <div class="screen-copy"><small>Developer experience</small><h3>Developer Portal</h3><p>Self-service accounts, plan selection, scoped API keys, usage visibility, dataset access, and persistent crawl plans.</p></div>
+          </article>
+          <article class="screen">
+            <img src="assets/panel.png" alt="Adaptive News technical operator panel with crawler and AI health" loading="lazy">
+            <div class="screen-copy"><small>Operator experience</small><h3>Technical Control Panel</h3><p>Targets, AI providers, crawl IPs, HTTP status, live logs, reports, exports, and unresolved feedback in one place.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="security">
+      <div class="shell security-band">
+        <div>
+          <p class="eyebrow">Private core, public confidence</p>
+          <h2>Publish the workflow, not the operational secrets.</h2>
+          <p>This public site explains the product and integration model. The implementation repository, raw datasets, proxy credentials, provider tokens, local databases, and operator configuration remain private.</p>
+        </div>
+        <div class="boundary" aria-label="Public and private data boundary">
+          <div><strong>Safe to publish</strong><span>Architecture, feature documentation, product screenshots, public API concepts, and integration workflow.</span></div>
+          <div><strong>Kept private</strong><span>Source code, credentials, raw HTML, private datasets, SQLite state, provider configuration, and proxy URLs.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="contact">
+      <div class="shell contact">
+        <div>
+          <p class="eyebrow">Commercial and custom builds</p>
+          <h2>Need a tailored news intelligence platform?</h2>
+          <p>Request custom source onboarding, private deployment, ingestion integration, AI-provider routing, API schema changes, reporting, or a branded customer experience.</p>
+          <a class="button dark" href="https://github.com/digimasoud/adaptive-news-workflow/issues/new?template=customization-request.yml">Request customization</a>
+          <p class="contact-note">GitHub issues are public. Do not include credentials, private datasets, or confidential business details.</p>
+        </div>
+        <aside class="contact-aside">
+          <strong>Professional contact route</strong>
+          <span>Commercial inquiries are currently handled through the public project repository. A dedicated domain email will be published after the business mailbox is configured.</span>
+        </aside>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>Adaptive News AI. Private news intelligence infrastructure.</span>
+      <div><a href="https://github.com/digimasoud/adaptive-news-workflow">Public workflow</a> &nbsp; / &nbsp; <a href="https://github.com/digimasoud">Project owner</a></div>
+    </div>
+  </footer>
 </body>
 </html>
