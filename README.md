@@ -107,6 +107,7 @@ A dedicated domain mailbox is the recommended long-term channel for private comm
 - `sitemap.xml`: sitemap for GitHub Pages.
 - `llms.txt`: concise product and data-boundary context for AI agents.
 - `404.html`: index-safe custom not-found page.
+- `4dcf971ac699cadc2f08a36719d2c2af.txt`: IndexNow ownership key for this GitHub Pages path.
 - `favicon.svg`: Adaptive News AI browser icon.
 - `assets/homepage.png`: social preview and homepage screenshot.
 - `assets/og-image.png`: dedicated `1200x630` Open Graph and Twitter share image.
@@ -124,6 +125,7 @@ Implemented in the public site:
 - `WebSite`, `WebPage`, `ImageObject`, `SoftwareApplication`, and visible `FAQPage` JSON-LD.
 - Discoverable HTML images with dimensions, descriptive alt text, lazy loading, and image sitemap entries.
 - Root sitemap, robots declaration, favicon, HTTPS GitHub Pages hosting, custom 404, and `llms.txt`.
+- IndexNow verification and change notification for participating search engines.
 - Responsive layouts verified at desktop and mobile widths.
 
 External setup still requires the site owner:
