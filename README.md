@@ -20,21 +20,29 @@ The implementation repository is private. This public repository is the shareabl
 
 ## Product Summary
 
-Adaptive News AI is a lean news platform core with three surfaces:
+Adaptive News AI is a lean news platform core with four connected surfaces:
 
 | Surface | Purpose |
 | --- | --- |
 | AI News Homepage | Public users ask AI questions about the crawled news dataset. |
 | Developer Portal | Developers sign up, choose a plan, create API keys, and define crawl plans. |
 | Technical Panel | Operators manage targets, AI providers, HTTP status, reports, logs, and dataset access. |
+| Public Workflow | Search engines and collaborators see an SEO-safe explanation while source remains private. |
 
 ## What It Does
 
 - Ask AI questions about crawled news.
 - Discover news URLs from robots and sitemaps.
 - Track HTTP status codes and crawl health.
+- Rotate and monitor crawl proxies/IPs with quarantine, blacklist detection, and capacity guidance.
+- Extract resilient titles, publisher categories, and source tags from metadata and JSON-LD.
+- Enrich records with optional AI summaries, entities, and topical tags.
 - Store a local news dataset.
 - Let developers sign up, choose a plan, create API keys, and define crawl plans.
+- Run hourly, daily, and weekly plans with persistent history, quotas, and restart recovery.
+- Serve a scoped, rate-limited Developer API with dataset filters and usage reporting.
+- Switch every product surface between Persian RTL and English LTR.
+- Collect component-level bug reports for operator triage.
 - Show public screenshots for the homepage, developer portal, and technical crawler panel.
 - Publish SEO metadata, Open Graph tags, `robots.txt`, `sitemap.xml`, and JSON-LD structured data.
 
@@ -56,28 +64,31 @@ Adaptive News AI is a lean news platform core with three surfaces:
 ## Workflow
 
 ```text
-Target sites -> robots/sitemaps -> adaptive crawler -> local dataset -> AI news answers -> developer API
+Target sites -> robots/sitemaps -> crawl IP pool -> adaptive crawler -> metadata/AI enrichment -> local dataset -> AI answers and Developer API
 ```
 
 Detailed flow:
 
 1. Discover target websites through `robots.txt`, sitemap indexes, and news sitemap paths.
 2. Score URLs with deterministic heuristics and optional AI classification.
-3. Fetch raw HTML while recording HTTP status and redirect history.
-4. Store public-safe metadata in a local dataset.
-5. Answer news questions from the crawled dataset.
-6. Let developers create API keys and crawl plans.
-7. Let operators manage targets, reports, logs, and AI providers.
+3. Fetch pages through the proxy/direct-IP pool while recording status, retries, and block health.
+4. Extract titles, categories, tags, canonical URLs, and optional AI enrichment.
+5. Store private records locally and expose only public-safe fields through the API.
+6. Answer news questions from the crawled dataset.
+7. Let developers create scoped API keys and persistent crawl plans.
+8. Enforce per-minute and monthly plan usage limits.
+9. Let operators manage targets, AI providers, crawl IPs, reports, logs, and feedback.
 
 ## Goals
 
 - `done`: Public news AI homepage.
 - `active`: Developer API self-service.
-- `next`: Scheduled crawl plans.
+- `active`: Scheduled hourly/daily/weekly crawl plans.
 - `active`: 100+ Persian and international news sources.
-- `planned`: AI extraction, entities, tags, and multilingual summaries.
+- `active`: AI extraction, entities, tags, and multilingual summaries.
 - `done`: Public workflow with private source code.
-- `planned`: Usage metering, rate limits, and billing readiness.
+- `active`: Usage metering, rate limits, and billing readiness.
+- `active`: Crawl IP rotation, health, blacklist, and capacity management.
 
 ## Private Boundary
 
