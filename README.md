@@ -23,6 +23,7 @@ Adaptive News AI is a lean news platform core with four connected surfaces:
 
 - Ask AI questions about crawled news.
 - Discover news URLs from robots and sitemaps.
+- Prioritize language-specific and recent publisher sitemaps across a multilingual source catalog.
 - Track HTTP status codes and crawl health.
 - Rotate and monitor crawl proxies/IPs with quarantine, blacklist detection, and capacity guidance.
 - Extract resilient titles, publisher categories, and source tags from metadata and JSON-LD.
