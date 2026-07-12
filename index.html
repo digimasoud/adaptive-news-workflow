@@ -83,6 +83,7 @@
             "Managed proxy and crawl IP rotation",
             "Host-scoped authorized premium source sessions",
             "Customer self-hosting with private versioned updates",
+            "Email and password read-only dashboard preview",
             "Resilient title and publisher taxonomy extraction",
             "AI summaries, entities, and topical tags",
             "Scoped API keys, quotas, and usage metering",
@@ -543,6 +544,7 @@
             <h3>Authenticated news APIs</h3>
             <ul>
               <li>Developer signup, login, account sessions, plan selection, and self-service dashboard.</li>
+              <li>Read-only product preview accounts with email/password access and backend-enforced write restrictions.</li>
               <li>One-time key display, hashed secret storage, scopes, revocation state, and last-use tracking.</li>
               <li>X-API-Key and Bearer authentication for paginated list, article detail, usage, and crawl-plan APIs.</li>
               <li>Dataset search plus source, publisher category, and publisher tag filters without raw HTML exposure.</li>
@@ -639,6 +641,7 @@
           <details><summary>How does crawl IP management work?</summary><p>The operator can configure multiple HTTP or HTTPS proxies, retain direct server fallback, rotate requests, quarantine unhealthy endpoints, detect blacklist conditions, and review capacity recommendations.</p></details>
           <details><summary>What does the Developer API expose?</summary><p>Scoped API keys provide public-safe article records, search and source taxonomy filters, usage reporting, and crawl-plan operations. Raw HTML and private operator state are excluded.</p></details>
           <details><summary>Can Adaptive News AI run on one private server?</summary><p>Yes. The platform is designed for a lean Docker-based single-server deployment with persistent local state and optional integration with a separate ingestion service.</p></details>
+          <details><summary>Can I preview the dashboard before deployment?</summary><p>Yes. A dedicated email/password preview shows realistic sources, crawl plans, AI health, usage, and dataset records. Preview accounts are read-only and cannot create keys, run crawls, or change production settings.</p></details>
           <details><summary>Can it crawl sources that require an authorized account?</summary><p>Yes. Operators can attach host-scoped Basic, Bearer, custom-header, or existing session-cookie profiles to targets they are authorized to access. The crawler does not bypass paywalls or publisher controls.</p></details>
           <details><summary>Is the crawler source code public?</summary><p>No. The implementation, credentials, datasets, and operational configuration remain private. This public site documents the product workflow and integration model.</p></details>
         </div>

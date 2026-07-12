@@ -73,6 +73,10 @@ Customer deployments can run on their own infrastructure from a private versione
 Authorized source accounts can be attached per target with host-scoped sessions; the product
 does not bypass paywalls or publisher access controls.
 
+Prospective users can also create an email/password preview account to inspect a realistic,
+read-only operations dashboard. Preview accounts cannot issue API keys, queue crawls, or modify
+production configuration.
+
 Detailed flow:
 
 1. Discover target websites through `robots.txt`, sitemap indexes, and news sitemap paths.
