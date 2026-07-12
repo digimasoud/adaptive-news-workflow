@@ -1,0 +1,78 @@
+name: Commercial customization request
+description: Request a custom deployment, source integration, API workflow, or branded product experience.
+title: "[Customization]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Adaptive News AI. Share the non-confidential scope below so the project owner can evaluate the request.
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or project
+      placeholder: Company, newsroom, research team, or product name
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Describe the product or workflow you want to build.
+      placeholder: We need a private news intelligence service that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources, languages, and regions
+      description: List representative publishers, languages, and geographic coverage.
+      placeholder: English and Persian publishers across...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: Expected monthly volume
+      options:
+        - Fewer than 10,000 articles
+        - 10,000 to 50,000 articles
+        - 50,000 to 250,000 articles
+        - More than 250,000 articles
+        - Not estimated yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Preferred deployment
+      options:
+        - Managed single server
+        - Private cloud or VPS
+        - On-premises
+        - API integration only
+        - Need a recommendation
+    validations:
+      required: true
+
+  - type: textarea
+    id: integrations
+    attributes:
+      label: Required integrations or customization
+      description: Include AI providers, ingestion systems, API schemas, reports, authentication, or branding needs.
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Target timeline
+      placeholder: Desired pilot or production date
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public issue acknowledgement
+      options:
+        - label: I have not included credentials, private datasets, personal data, or confidential business information.
+          required: true
